@@ -11,8 +11,8 @@ struct ContentView: View {
     @State private var selectedOption = 0
     let options = ["Stay Local", "Go Global"]
     
-    @State private var isTextBoxExpanded = false // Control to expand the text box
-    @State private var isLiked = false // Like state
+    @State private var isTextBoxExpanded = false
+    @State private var isLiked = false
     
     var body: some View {
         VStack {
@@ -62,12 +62,12 @@ struct ContentView: View {
                     .frame(width: 300.0)
                     
                     Button(action: {
-                        isLiked.toggle() // Toggle the like state
+                        isLiked.toggle()
                     }) {
                         ZStack {
                             Circle()
                                 .fill(Color.black)
-                                .frame(width: 40, height: 40) // Adjust the size as needed
+                                .frame(width: 40, height: 40)
                             
                             Image(systemName: isLiked ? "heart.fill" : "heart")
                                 .foregroundColor(.white)
